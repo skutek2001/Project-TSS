@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Strona glówna</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous"></link> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" crossorigin="anonymous"></link>
+        <script type="text/javascript" src="/ProjektSkutekKrystian/static/functionsWebSockets.js"></script>
+        <script type="text/javascript" src="/ProjektSkutekKrystian/static/canvasjs.min.js"></script>
+    </head>
+    <body>
+        <h2>Skutek Krystian</h2>
+        <div>
+            <form action="">
+                <input onclick="doSend(messageTextID.value)" value="Wyślij..." type="button" />
+                <input id="messageTextID" name="messageText" value="Hello WebSocket!" type="text"/> <br/>
+                <input id="messageStatusID" name="messageStatus" value="...." type="text" size="60"/><br/>
+            </form>
+            <h2 style="text-align: center;">Wykres na podstawie danych WebSocket/JSON</h2>
+            <div style="text-align: center;">
+                <div id="chartContainer" style="height: 300px; width: 50%; margin-left: 25%;"></div>
+            </div>
+            <a th:href="@{/}" class="btn btn-primary">Powrót<i class="fas fa-sing-out-alt"></i></a>
+            <a th:href="@{/logout}" class="btn btn-primary">Wyloguj<i class="fas fa-sing-out-alt"></i></a>
+        </div>
+    </body>
+</html>
+
+
